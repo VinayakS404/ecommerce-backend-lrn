@@ -19,14 +19,14 @@ public class Products {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String description;
+    private String desc;
     private String  brand;
     private BigDecimal price;
     private String  category;
 
     private Date releaseDate;
     private Boolean available;
-    private Integer quantity = 0;
+    private Integer stockQuantity = 0;
 
     private String imageName;
     private String imageType;
@@ -48,5 +48,13 @@ public class Products {
 
     public void setImageData(byte[] imageData) {
         this.imageData = imageData;
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
+
+    public String getImageType() {
+        return imageType;
     }
 }
